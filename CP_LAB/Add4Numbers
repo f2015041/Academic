@@ -1,0 +1,12 @@
+#include <stdio.h>
+ 
+ void main()
+ 
+ {
+    int a,b,c,d,x;
+   printf("Input 4 Ints);
+   scanf(" %d%d%d%d" , &a,&b,&c,&d );
+   x=a+b+c+d;
+   prinf(x);
+ }
+

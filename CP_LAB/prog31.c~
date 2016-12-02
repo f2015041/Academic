@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+  char a[100];
+    gets(a);
+      printf("%d",isPal(a));
+      }
+
+      int isPal(char *str)
+      {
+          flag=1;
+	      int n =strlen(str);
+	          for(i=0;i<n;i++)
+		      {
+		              for(j=n;j<n;j--)
+			              {
+				                  if(a[i]==a[j])
+						              flag=0;
+							                  else
+									              flag=1;
+										              }
+											          }
+												      return flag;
+												      }

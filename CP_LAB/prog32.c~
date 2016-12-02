@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+
+struct book
+{
+    int year;
+        char name[20],author[25];
+	    float price;
+	    };
+
+	    void main()
+	    {
+	        int n,i;
+		    char ele[100];
+		        scanf("%d",&n);
+			    struct book b[n];
+			        for(i=0;i<n;i++)
+				    {
+				            scanf("%d",&b[i].year);
+					            scanf("%f",&b[i].price);
+						            gets(b[i].name);
+							            gets(b[i].author);
+								        }
+									    gets(ele);
+									        for(i=0;i<n;i++)
+										    {
+										            if(!(strcmp(b.name[i],ele)))
+											            {
+												                puts(b[i].name);
+														            puts(b[i].author);
+															                printf("%d",b[i].year);
+																	            printf("%f",b[i].price);
+																		            }
+																			        }
+																				}

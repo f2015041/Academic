@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void
+main ()
+{
+  int sum, a[100], i, n, flag = 0, ele;
+  scanf ("%d", &n);
+  scanf ("%d", &ele);
+  for (i = 0; i < n; i++)
+    {
+      scanf ("%d", &a[i]);
+    }
+  for (i = 0; i < n; i++)
+    {
+      if (ele == a[i])
+	flag = 1;
+    }
+
+  if (flag)
+    printf ("Found");
+  else printf("Not found");
+}
