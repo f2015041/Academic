@@ -1,0 +1,60 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+/*class term{                                      // For each term . eg:-5x^3
+      private int  coeff;
+      private int power;
+      public void setCoeffPow(int p,int c){ power=p; coeff=c; }
+      public int getCoeff(){return coeff; }
+      public int getPower(){return power;}
+} */
+class polynomial{
+      int terms;
+      int coeff;
+      int power;
+      public polynomial(int coeff,int power,int terms)
+      {
+       this.terms=terms;
+       this.coeff=coeff;
+       this.power=power;
+      }
+      public int addpoly(int x)
+      {
+       return(coeff*(int)(Math.pow(x,power)));
+      }
+      public void display(){
+      System.out.println(coeff+" " +power);
+      }
+}
+
+
+      
+      
+public class p14polysum{
+       public static void main(String[] args){
+       ArrayList<polynomial> plist=new ArrayList<polynomial>();
+       Scanner s1=new Scanner(System.in);
+       int x,term,coeff,power,sum=0;
+       System.out.println("Enter x");
+       x=s1.nextInt();
+       System.out.println("Enter number of terms");
+       term=s1.nextInt();
+       for(int i=0;i<term;i++){
+           System.out.println("Enter coeff");
+           coeff=s1.nextInt();
+	   System.out.println("Enter POwer");
+	   power=s1.nextInt();
+	   polynomial p= new polynomial(coeff,power,term);
+	   plist.add(p);
+	}
+	sum=0;
+	for(polynomial p:plist){ sum+=p.addpoly(x); }
+	System.out.println("no of terms are "+ term);
+	System.out.println("Coefficinets and powers are");
+	for(polynomial p:plist){
+	    p.display();
+	}
+	System.out.println("sum is"+sum);
+	s1.close();
+	}
+}
+
